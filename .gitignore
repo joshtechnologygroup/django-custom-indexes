@@ -1,0 +1,8 @@
+# Python bytecode:
+*.py[co]
+
+# IDE Files:
+.idea
+
+dist/*
+*.egg-info
