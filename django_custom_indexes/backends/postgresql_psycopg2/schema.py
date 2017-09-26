@@ -2,7 +2,15 @@ import importlib
 
 from django.conf import settings
 
-BASE_ENGINE = getattr(settings, 'DJANGO_CUSTOM_INDEXES_BASE_ENGINE', 'django.db.backends.postgresql_psycopg2')
+try:
+    # Django >= 1.9
+    from django.db.backends.postgresql.base import *
+
+    DEFAULT_BACKEND = 'django.db.backends.postgresql'
+except ImportError:
+    DEFAULT_BACKEND = 'django.db.backends.postgresql_psycopg2'
+
+BASE_ENGINE = getattr(settings, 'DJANGO_CUSTOM_INDEXES_BASE_ENGINE', DEFAULT_BACKEND)
 
 BASE_MODULE = importlib.import_module('{}.base'.format(BASE_ENGINE))
 
@@ -59,4 +67,3 @@ class DatabaseSchemaEditor(BASE_MODULE.DatabaseWrapper.SchemaEditorClass):
                 'name', self.quote_name(self._create_index_name(model, index['columns'], suffix="_custom"))
             )
             self.deferred_sql.append(self.sql_delete_index % {"name": name})
-

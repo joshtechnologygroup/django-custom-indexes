@@ -12,7 +12,7 @@ setup(
     name='django-custom-indexes',
     url='https://github.com/joshtechnologygroup/django-custom-indexes/',
     packages=find_packages(),
-    version='0.1.1',
+    version='0.1.2',
     description='PostgreSQL custom indexes for Django models',
     long_description=README,
     author='Anshul Chhangani',
