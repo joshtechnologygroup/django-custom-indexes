@@ -19,6 +19,8 @@ class CustomFieldMixin(object):
         return errors
 
     def _check_custom_indexes(self):
+        if not self.custom_indexes:
+            return []
         if not isinstance(self.custom_indexes, list):
             return [
                 checks.Error(
