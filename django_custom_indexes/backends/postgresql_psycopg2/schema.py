@@ -32,7 +32,7 @@ class DatabaseSchemaEditor(BASE_MODULE.DatabaseWrapper.SchemaEditorClass):
                 "table": self.quote_name(model._meta.db_table),
                 "using": index.get('using', ''),
                 "columns": "({})".format(columns) if columns else "",
-                "where": index.get('where', ''),
+                "where": 'WHERE {}'.format(index.get('where')) if index.get('where') else '',
             })
 
     def create_model(self, model):
