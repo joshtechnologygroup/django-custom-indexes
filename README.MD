@@ -10,7 +10,10 @@ migrations manually with RunSQL to create indexes.
 Installation
 ============
 
-This app is available on ``PyPI`` and can be installed with:
+[![](https://img.shields.io/pypi/v/django-custom-indexes.svg)](https://pypi.org/project/django-custom-indexes/) [![](https://img.shields.io/badge/Maintained-yes-green.svg)](https://pypi.org/project/django-custom-indexes/) [![](https://img.shields.io/pypi/djversions/django-custom-indexes.svg)](https://pypi.org/project/django-custom-indexes/) [![](https://img.shields.io/pypi/pyversions/django-custom-indexes.svg)](https://pypi.org/project/django-custom-indexes/)
+
+
+The package can be installed by running the following command:
 
 
     pip install django-custom-indexes
