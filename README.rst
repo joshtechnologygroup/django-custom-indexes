@@ -29,8 +29,7 @@ Add ``django_custom_indexes`` to your ``INSTALLED_APPS``:
 
 Requirements:
 
--  Django 1.7 to 1.10 (1.11 already has support for defining indexes in
-   models using Meta class).
+-  Django 1.7 to 1.11 (not tested for 2.0+).
 -  PostgreSQL database backend.
 -  Python 2.7
 
