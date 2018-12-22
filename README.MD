@@ -12,7 +12,6 @@ Installation
 
 This app is available on ``PyPI`` and can be installed with:
 
-::
 
     pip install django-custom-indexes
 
@@ -20,7 +19,6 @@ PyPI: https://pypi.python.org/pypi/django-custom-indexes/
 
 Add ``django_custom_indexes`` to your ``INSTALLED_APPS``:
 
-::
 
     INSTALLED_APPS = (
         '...',
@@ -50,7 +48,6 @@ postgresql\_psycopg2 add the following setting:
 
 Example Usage:
 
-::
 
     from django_custom_indexes import model_fields
     from django.db import models
@@ -79,3 +76,4 @@ Example Usage:
                 }
             ]
         )
+
